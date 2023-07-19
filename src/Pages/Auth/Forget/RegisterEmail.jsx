@@ -1,17 +1,6 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import { Form, InputGroup, Button } from "react-bootstrap";
-import classes from "../index.module.scss";
-import emailsvg from "../../../Images/email.svg";
-import Lock from "../../../Images/Lock.svg";
 import { Link, useNavigate } from "react-router-dom";
-import { ENDPOINT } from "config/constants";
-import AuthService from "services/auth.service";
-import Loader from "Components/Loader";
-import { LOGIN_SUCCESS } from "actions/types";
-import swal from "sweetalert";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const RegisterEmail = () => {
 //   const dispatch = useDispatch();
@@ -65,18 +54,14 @@ const RegisterEmail = () => {
 //   if (isLoading === true) return <Loader isLoading={isLoading} />
 
     return (
-            <div className={classes.formBox}>
+            <div className="formBox">
                 <h1>Reset Password</h1>
-                <p className={"font-18 mb-5"}>Enter your detail below</p>
                 <Form 
                 //  noValidate validated={validated}
                  >
                     <Form.Group className="mb-3" controlId="loginemail">
                         <Form.Label>Email address</Form.Label>
                         <InputGroup>
-                            <InputGroup.Text id="basic-addon1">
-                                <img src={emailsvg} alt={"goWild"} align={"img"}/>
-                            </InputGroup.Text>
                             <Form.Control
                                 type="email"
                                 placeholder="Enter email"

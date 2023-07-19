@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import RegisterEmail from "../Forget/RegisterEmail";
 // import { useDispatch } from "react-redux";
 // import { Form, InputGroup, Button } from "react-bootstrap";
 // import classes from "../login.scss";
@@ -47,7 +48,7 @@ const Login = () => {
         <div className="header">
             <h1>Sign in to Manage.</h1>
             <p className={"font-18 mb-5"}>Enter your detail below</p>
-          
+          <RegisterEmail />
         </div>
     );
 
